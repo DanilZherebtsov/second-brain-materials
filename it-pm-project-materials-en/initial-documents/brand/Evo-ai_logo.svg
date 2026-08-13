@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="200" viewBox="0 0 480 200" role="img" aria-label="Evo-ai">
+  <title>Evo-ai</title>
+  <desc>The Evo-ai mark: two nodes (business and AI) joined by a smooth arc, plus a rising evolution arc with dots. Wordmark evo·ai.</desc>
+
+  <!-- Light, cool brand background -->
+  <rect x="0" y="0" width="480" height="200" rx="20" fill="#F5F4FB"/>
+
+  <defs>
+    <!-- Connecting-arc gradient: violet accent -> teal accent -->
+    <linearGradient id="link" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6D5BF7"/>
+      <stop offset="1" stop-color="#19C7B6"/>
+    </linearGradient>
+    <linearGradient id="evo" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#6D5BF7"/>
+      <stop offset="1" stop-color="#19C7B6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- MARK: laid out on the left-hand side of the canvas -->
+  <g transform="translate(40,30)">
+
+    <!-- Connecting arc (business <-> AI): a smooth curve between the two nodes -->
+    <path d="M 22 92 C 50 40, 100 40, 128 92" fill="none"
+          stroke="url(#link)" stroke-width="7" stroke-linecap="round"/>
+
+    <!-- Rising "evolution" arc above the link -->
+    <path d="M 14 104 C 60 -2, 140 -10, 150 28" fill="none"
+          stroke="#19C7B6" stroke-width="3.5" stroke-linecap="round"
+          stroke-dasharray="2 9" opacity="0.85"/>
+
+    <!-- Growing evolution dots (smaller to larger, ascending row) -->
+    <circle cx="46" cy="22" r="3"   fill="#6D5BF7"/>
+    <circle cx="78" cy="13" r="4"   fill="#19C7B6"/>
+    <circle cx="112" cy="9" r="5"   fill="#6D5BF7"/>
+
+    <!-- Node 1 — business (violet accent, with a ring core) -->
+    <circle cx="22"  cy="92" r="20" fill="#6D5BF7"/>
+    <circle cx="22"  cy="92" r="8"  fill="#F5F4FB"/>
+
+    <!-- Node 2 — AI (teal accent, with a ring core) -->
+    <circle cx="128" cy="92" r="20" fill="#19C7B6"/>
+    <circle cx="128" cy="92" r="8"  fill="#F5F4FB"/>
+
+  </g>
+
+  <!-- WORDMARK: evo·ai -->
+  <g transform="translate(232,128)" fill="#171633"
+     font-family="'Space Grotesk','Sora','Arial',sans-serif"
+     font-weight="700" font-size="58" letter-spacing="-1">
+    <text x="0" y="0">evo<tspan fill="#6D5BF7">·</tspan>ai</text>
+  </g>
+
+  <!-- Thin tagline under the wordmark -->
+  <text x="234" y="152" fill="#171633" opacity="0.7"
+        font-family="'Inter','Arial',sans-serif" font-weight="400"
+        font-size="13" letter-spacing="0.5">We connect business and AI</text>
+
+</svg>
