@@ -1,7 +1,7 @@
 <!--
 SOURCE (.md) → builds into Шпаргалка_Cowork_en.docx. Handed to participants AFTER the workshop.
 English version of Шпаргалка_Cowork.md. The former "First week checklist" is merged in (section "First week plan").
-Check against workshop-coffee.md when the script changes. Build: python3 раздатки/build-docx.py раздатки/second-brain-materials/Шпаргалка_Cowork_en.md раздатки/second-brain-materials/Шпаргалка_Cowork_en.docx
+Check against workshop-coffee.md when the script changes. Build: python3 раздатки/build-docx.py раздатки/second-brain-materials/шпаргалка/Шпаргалка_Cowork_en.md раздатки/second-brain-materials/шпаргалка/Шпаргалка_Cowork_en.docx
 -->
 # Claude Cowork Cheat Sheet
 
@@ -12,11 +12,14 @@ Your post-workshop reference: how to frame tasks, which commands work, what not 
 ## How to get a project on the rails — checklist
 
 1. **Download the constructor.** Repository <https://github.com/DanilZherebtsov/knowledge-base-constructor-en> → green **Code → Download ZIP** button → unzip.
-2. **Put it on your disk.** Place the `knowledge-base-constructor-en-main` folder wherever you'll run the project (your desktop, for example); it helps to rename your copy after the project itself — `<project>-second-brain`.
-3. **Create the project in Cowork.** Claude Desktop → **Cowork** tab → **Projects** → **+** → **Use an existing folder** → pick that folder.
-4. **Go through the constructor's guide.** In your first message, tell it **who you are and what you do** (you can attach your job description). Answer a couple of interview questions — the constructor will build the structure around you (`CLAUDE.md`, `raw/`, `wiki/`, `output/`, `input/`) and clear away the scaffolding.
-5. **Add your documents (if you have any).** Drop working files into the project's **`input/`** folder and ask: "sort through these documents and put them in order" — Cowork will file the raw material into `raw/` and synthesize the knowledge into `wiki/`.
-6. **From there — work in chats** (just like in the workshop): **1 chat = 1 task**; after a task — "remember this" / "record this in `wiki/`"; separate roles (lawyer, finance, …) once you've built up enough work in that area; once a week — "run maintenance".
+2. **Put it on your disk.** Place the `knowledge-base-constructor-en-main` folder wherever you'll run the project (your Documents folder, for example); it helps to rename your copy after the project itself — `<project name>`.
+3. **Create the project in Cowork.** Claude Desktop → **Projects** → **New project** → **Enter a project name** → **click Use a folder** → pick that folder.
+![How to create a project](assets/create-project.png)
+4. On the next step, paste the following text into the **Instructions** field: `There is a CLAUDE.md in the project folder — read it first and follow it.`
+![Set the base instruction](assets/project-instructions.png)
+5. **Go through the constructor's guide.** In your first message, tell it **who you are and what you do** (you can attach your job description). Answer a couple of interview questions — the constructor will build the structure around you (`CLAUDE.md`, `raw/`, `wiki/`, `output/`, `input/`) and clear away the scaffolding.
+6. **Add your documents (if you have any).** Drop working files into the project's **`input/`** folder and ask: "sort through these documents and put them in order" — Cowork will file the raw material into `raw/` and synthesize the knowledge into `wiki/`.
+7. **From there — work in chats** (just like in the workshop): **1 chat = 1 task**; after a task — "remember this" / "record this in `wiki/`"; separate roles (lawyer, finance, …) once you've built up enough work in that area; once a week — "run maintenance".
 
 ---
 
