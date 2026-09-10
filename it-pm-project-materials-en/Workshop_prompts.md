@@ -26,19 +26,19 @@ Find that file and produce an analytical report on the feedback:
 2. For each category — how many times it comes up, one or two specific quotes, and what it means for us before we go to production.
 3. Call out separately what people say that's positive — those are our strengths, we need to keep them.
 
-Save the result as Pilot feedback analysis
+Save the result as Pilot feedback analysis in docx format.
 
 Before you start, ask me one or two clarifying questions if anything is unclear.
 ```
 
-### 4. Demo 1 · Iteration: a section on the second release
+### 4. Demo 1 · Iteration: what to fix before production
 ```
 Good. Now add a section to this report called "Must-fix before production launch" — based on the comments where people criticise specific technical parameters (latency at peak hours, answers with no reference to a policy, confusion over tariffs, no escalation for complex cases). 5-7 items; for each one, what exactly to do and how to verify it's fixed.
 ```
 
 ### 5. Demo 1 · Excel: vendor comparison
 ```
-Now open the quotes from the inference vendors (the Excel with prices and terms).
+Open the quotes from the inference vendors (the Excel with prices and terms).
 
 The prices and terms are in all different formats (dollars/euros, per 1,000 requests / per 1M tokens / per GPU-hour / per month, different minimum orders, different payment terms). Normalise them to a single format:
 — all prices in $ per 1,000 requests (convert euros at 1.08 $/€; assumption: an average request ≈ 1,500 tokens);
@@ -46,7 +46,7 @@ The prices and terms are in all different formats (dollars/euros, per 1,000 requ
 — an "SLA" column: the percentage as a number;
 — a "Postpay available" column: yes/no/partial.
 
-Save it as a new file called Vendor_comparison_2026-06.xlsx. Don't touch the original file.
+Save it as a new file called Vendor_comparison_2026-06.xlsx.
 
 At the end — a short written conclusion: which vendor is the best deal all things considered (bear in mind that VectoDB is about a vector database, not inference, so don't compare it directly).
 ```
@@ -79,7 +79,7 @@ Is there anything here important and long-lived enough to record in wiki/? If so
 
 ### 9. Demo 2 · Email to the counterparty
 ```
-Draft an email to the client with our comments on the contract. For every critical clause, give its current wording, our preferred wording, and the rationale for the change we're asking for. The document should be ready to send to this client as-is.
+Draft an email to the client with our comments on the contract. For every critical clause, give its current wording, our preferred wording, and the rationale for the change we're asking for. The document should be ready to send to this client as-is. Save it in MS Word format.
 ```
 
 ### 10. Demo 3 · Research: the AI support assistant market
@@ -137,49 +137,24 @@ Do this:
 5. At the end — a short written comment: which of the top 5 to invite to the technical interview first, and why.
 ```
 
-### 14. Block 9 · Create the lawyer role
-```
-Create a lawyer role for our project.
-```
-
-### 15. Block 9 · Summon the lawyer
-```
-Work in the role of the lawyer. Confirm, and briefly tell me what we already have on record on the legal side.
-```
-
-### 16. Block 9 · Question for the lawyer: three risks
-```
-Name the three most serious legal risks we currently have on the project, and where each one comes from (a contract clause or a document).
-```
-
-### 17. Block 9 · Task for the lawyer: questions for Orbita
-```
-On the second client in the pipeline — Orbita — the client is ready to talk but hasn't sent a contract yet. Prepare a list of 10 questions and items we need to check and discuss with the client BEFORE signing a contract. Build on the risks we already identified on Hermes — let's not step on the same rake twice. Save the result to Orbita_questions.md.
-```
-
-### 18. Block 9 · Reminder to check Orbita's contract
-```
-When the contract arrives from this counterparty, we mustn't forget to check it against these points.
-```
-
-### 19. Block 9 · Create the finance role
+### 14. Block 9 · Create the finance role
 ```
 I've put a folder with our project economics standard into the project (project-standards). Create a finance role and process these documents — let them become its reference knowledge.
 ```
 
-### 20. Block 9 · Question for the finance lead: the norms
+### 15. Block 9 · Question for the finance lead: the norms
 ```
-Work in the role of the finance lead. What's our target gross margin on a project, and the minimum client prepayment at the start? And does Hermes fit inside those bounds, given the data already in the project?
+We're working in the role of the finance lead. What's our target gross margin on a project, and the minimum client prepayment at the start? And does Hermes fit inside those bounds, given the data already in the project?
 ```
 
-### 21. Block 9 · Task for the finance lead: the project's financial profile
+### 16. Block 9 · Task for the finance lead: the project's financial profile
 ```
 Work out the financial profile of project Hermes: gross margin, cost structure and project EBITDA. Base it on our norms (payroll share, infrastructure/inference, reserve, target margin) and factor in the legal findings (the 12-month free-fixes warranty as a hidden cost, the late-delivery penalty). Take the contract value and the budget from the project.
 
 The output — a short .docx called "Hermes project financial profile" in output/drafts/, and record the conclusion in the project's knowledge base.
 ```
 
-### 22. Block 10 · Claude in Chrome: scouting Orbita
+### 17. Block 10 · Claude in Chrome: scouting Orbita
 ```
 Open the Orbita company website and the public sources about them (news, careers pages, social profiles). Put together a short dossier:
 — what the company does, its scale (revenue/headcount, if it's in the public data);
@@ -191,16 +166,7 @@ Open the Orbita company website and the public sources about them (news, careers
 Give me a short summary as text. I'll copy it into the project afterwards.
 ```
 
-### 23. Block 10 · Remember the lead dossier
-```
-Here's a dossier on the company Orbita — I pulled it from open sources via Claude in Chrome:
-
-[I paste the overview text from the side panel here]
-
-Remember this as knowledge about a lead client — it'll come in handy when we prepare the proposal and scope the Orbita project.
-```
-
-### 24. Block 11 · Scheduled task: competitor monitoring
+### 18. Block 11 · Scheduled task: competitor monitoring
 ```
 Using Claude in Chrome, open three competing AI support assistant sites:
 1. https://www.intercom.com/fin (Intercom Fin)
@@ -219,20 +185,20 @@ Create a digest at output/monitoring/Digest_YYYY-MM-DD.md (use today's date), co
 
 If there are material changes — append a short summary to output/monitoring/summary.md with the date. If nothing changed — append nothing.
 
-IMPORTANT: mode is Ask before acting — but don't ask permission to move between sites; permission is only needed if you're about to log in or click "buy".
+IMPORTANT: don't ask permission to move between sites — permission is only needed if you're about to log in or click "buy".
 ```
 
-### 25. Block 12 · Onboarding pack for the new PM
+### 19. Block 12 · Onboarding pack for the new PM
 ```
 I'm handing project Hermes to a new project manager. Put together an onboarding pack for them — only what they need for their zone: what stage the project is at, what decisions have been made (vendor, approach), what risks we found in the contract, what the project economics look like, what's currently open and needs a decision. Format it as a document they'll load into their own project as context. Don't tell them about all my other work — only their part, on Hermes.
 ```
 
-### 26. Block 12 · Joining the project as the new hire
+### 20. Block 12 · Joining the project as the new hire
 ```
-Process this onboarding material — I'm the new project manager on project Hermes at the Evo-ai studio, and I'm starting today. Turn it into my working knowledge and tell me briefly: what stage we're at, what decisions have already been made, what's on my plate.
+Process this onboarding material — I'm the new project manager on project Hermes at the Evo-ai studio, and I'm starting today. Turn it into my working knowledge and tell me briefly: what stage we're at, what decisions have already been made, what's on my plate. I've put the file in input.
 ```
 
-### 27. Block 14 · Landing page: hunting for pearls
+### 21. Block 13 · Landing page: hunting for pearls
 ```
 We want a one-page landing site for our flagship AI support assistant (an Evo-ai studio product, first deployment — project Hermes). The goal of the page: a wait-list of early/pilot clients, enquiries from companies that need AI, and proof to investors that the product is real.
 
@@ -243,9 +209,9 @@ Once you've found them — give me a list of the "pearls": what you found, which
 Wait for me to say "carry on" before you write any code.
 ```
 
-### 28. Block 14 · Landing page: build the page
+### 22. Block 13 · Landing page: build the page
 ```
-Great, go build it. The visuals from the deck — pull them out and use the ones that genuinely make the page stronger (not all of them). Make it a one-page site as **a single file that opens with a double click in a browser**, no elaborate technical scaffolding. Styling and fonts — per our brand. Save it to output/drafts/landing/, with the visuals alongside it, in the same folder.
+Great, go build it. The visuals from the deck — pull them out and use the ones that genuinely make the page stronger (not all of them).
 
 When you're done — open the file yourself, look at how it turned out, and if you see anything obviously off, fix it before you show me.
 ```

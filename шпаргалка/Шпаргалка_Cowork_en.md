@@ -1,7 +1,7 @@
 <!--
 SOURCE (.md) → builds into Шпаргалка_Cowork_en.docx. Handed to participants AFTER the workshop.
 English version of Шпаргалка_Cowork.md. The former "First week checklist" is merged in (section "First week plan").
-Check against workshop-coffee.md when the script changes. Build: python3 раздатки/build-docx.py раздатки/second-brain-materials/шпаргалка/Шпаргалка_Cowork_en.md раздатки/second-brain-materials/шпаргалка/Шпаргалка_Cowork_en.docx
+Check against workshop-coffee.md / workshop-it-pm-en.md when the script changes. Build: python3 раздатки/build-docx.py раздатки/second-brain-materials/шпаргалка/Шпаргалка_Cowork_en.md раздатки/second-brain-materials/шпаргалка/Шпаргалка_Cowork_en.docx
 -->
 # Claude Cowork Cheat Sheet
 
@@ -56,14 +56,14 @@ Your post-workshop reference: how to frame tasks, which commands work, what not 
 
 ## Working modes
 
-- **Ask before acting** — asks permission at every step. **By default, this is the only one we use.** It gives you time to stop both a mistake and a hidden malicious instruction coming from someone else's file or website.
-- **Act without asking** — works on its own. Turn it on only when a task is routine and already proven (a scheduled task you've debugged, for example). Claude always confirms file deletion regardless.
+- **Manual** — asks permission at every step. **By default, this is the only one we use.** It gives you time to stop both a mistake and a hidden malicious instruction coming from someone else's file or website.
+- **Automatic** — works on its own. Turn it on only when a task is routine and already proven (a scheduled task you've debugged, for example). Claude always confirms file deletion regardless.
 
 ---
 
 ## Memory: 5 levels (+ STATE)
 
-- **Global instructions** — your personal preferences across all projects (Settings → Cowork). Set it once, it works everywhere.
+- **Global instructions** — your personal preferences across all projects (Settings → General → Instructions for Claude). Set it once, it works everywhere.
 - **Project instructions (`CLAUDE.md`)** — this project's rules, loaded at the start of every chat. Built by the constructor.
 - **Chat context** — remembered until the end of the conversation; close it and it's gone.
 - **Claude memory** — project context across chats; helpful, but gets overwritten over time.
@@ -92,7 +92,7 @@ Don't run everything in one chat. Claude has a limited "attention window" (conte
 
 - **One folder — one project**, don't hand over all of `Documents`/`Desktop`.
 - **Only on an explicit "yes":** payments, sending emails, permanent deletion, passing files to third parties.
-- **Other people's files and websites** (from clients, counterparties) — only in **Ask before acting** mode (protection against prompt injection).
+- **Other people's files and websites** (from clients, counterparties) — only in **Manual** mode (protection against prompt injection).
 - **Don't put** the following into Cowork without a corporate plan: clients' personal data, NDA documents, third parties' medical or banking data (personal data law, 152-FZ).
 
 ---
@@ -143,7 +143,7 @@ Warm-ups, 10–15 minutes each — don't try to solve your biggest problem right
 
 **Habits for the week**
 
-- Every day — **Ask before acting** mode only.
+- Every day — **Manual** mode only.
 - Once a day — the **Usage** tab, to keep an eye on your limits.
 - A prompt that worked — **save it** (your personal library). One that didn't — **write down the problem**.
 - After the 3rd task — try setting up a specialized role chat (lawyer / finance / researcher).
@@ -151,7 +151,7 @@ Warm-ups, 10–15 minutes each — don't try to solve your biggest problem right
 
 **What NOT to do in your first week**
 
-- Do NOT switch to Act without asking.
+- Do NOT switch to Automatic.
 - Do NOT give access to entire personal folders (`Documents`, `Desktop`).
 - Do NOT upload clients' personal data, NDAs, or third parties' medical/financial data.
 - Do NOT automate critical processes for the first two weeks — build up your intuition first.
