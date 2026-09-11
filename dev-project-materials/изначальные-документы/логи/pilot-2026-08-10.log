@@ -1,0 +1,75 @@
+2026-08-10 07:58:31,413 INFO app.main request_id=- startup version=0.4.2 chunking=fixed llm_provider=modelapi llm_timeout_s=10.0 llm_retries=0
+2026-08-10 07:58:31,720 INFO app.kb_loader request_id=- kb load: 8/8 regulations loaded (chunking=fixed)
+2026-08-10 08:59:57,590 INFO app.main request_id=186898fa chat.request session=s-6835 text="Страховка груза на 750 000 ₽ — сколько стоит?"
+2026-08-10 08:59:57,796 INFO app.pipeline request_id=186898fa answered doc=R-07 clause=7.6 confidence=0.48 latency_ms=4118
+2026-08-10 09:28:52,589 INFO app.main request_id=d020a681 chat.request session=s-3dfa text="Экспресс по Москве 20 кг — сколько выйдет?"
+2026-08-10 09:29:02,612 ERROR app.llm request_id=d020a681 ModelApiClient timeout after 10.0s (attempt 1/1) — httpx.ReadTimeout
+2026-08-10 10:13:32,961 INFO app.main request_id=bea35771 chat.request session=s-c754 text="Добрый день, отправление ГЛ-225281 уже доставлено или нет?"
+2026-08-10 10:13:43,010 ERROR app.llm request_id=bea35771 ModelApiClient timeout after 10.0s (attempt 1/1) — httpx.ReadTimeout
+2026-08-10 10:13:43,695 INFO app.main request_id=f7f31251 chat.request session=s-0d9e text="Статус ГЛ-649702 подскажите пожалуйста"
+2026-08-10 10:13:53,742 ERROR app.llm request_id=f7f31251 ModelApiClient timeout after 10.0s (attempt 1/1) — httpx.ReadTimeout
+2026-08-10 10:34:35,422 INFO app.main request_id=228879fd chat.request session=s-2c01 text="Клиент требует компенсацию за разбитый товар в ГЛ-663490, куда направить?"
+2026-08-10 10:34:45,445 ERROR app.llm request_id=228879fd ModelApiClient timeout after 10.0s (attempt 1/1) — httpx.ReadTimeout
+2026-08-10 10:38:31,123 INFO app.main request_id=ad38c1fe chat.request session=s-5f2d text="Недостача двух коробок в ГЛ-592085, как подать претензию?"
+2026-08-10 10:38:35,454 INFO app.pipeline request_id=ad38c1fe answered doc=R-04 clause=4.2 confidence=0.69 latency_ms=4331
+2026-08-10 10:41:33,696 INFO app.main request_id=e05d8f68 chat.request session=s-0d9e text="Сколько стоит отправить 15 кг Стандартом по Москве?"
+2026-08-10 10:41:37,799 INFO app.pipeline request_id=e05d8f68 answered doc=R-03 clause=3.1 confidence=0.75 latency_ms=4103
+2026-08-10 10:45:36,641 INFO app.main request_id=996368fe chat.request session=s-3dfa text="Через какой терминал идёт груз в Самару?"
+2026-08-10 10:45:41,909 WARNING app.pipeline request_id=996368fe answer_without_citation topic=через терминал идет груз
+2026-08-10 10:45:41,916 INFO app.pipeline request_id=996368fe answered doc=- clause=- confidence=0.57 latency_ms=5275
+2026-08-10 10:57:05,694 INFO app.main request_id=8ce634f3 chat.request session=s-6835 text="Сколько идёт груз Экономом до Новосибирска?"
+2026-08-10 10:57:05,980 ERROR app.llm request_id=8ce634f3 HTTPStatusError 429 Too Many Requests from МодельАПИ
+2026-08-10 10:57:05,981 ERROR app.llm request_id=8ce634f3 fallback provider not configured (TOKENFLOW_KEY missing)
+2026-08-10 10:57:42,897 INFO app.main request_id=974ee323 chat.request session=s-cfd2 text="Успеем до пятницы, если сдадим сегодня Экспрессом в Казань?"
+2026-08-10 10:57:50,815 INFO app.pipeline request_id=974ee323 answered doc=R-02 clause=2.5 confidence=0.66 latency_ms=7918
+2026-08-10 11:03:00,491 INFO app.main request_id=6c055638 chat.request session=s-6835 text="подскажите по ГЛ-230219, клиент нервничает, груз срочный"
+2026-08-10 11:03:01,026 ERROR app.helpdesk request_id=6c055638 status request failed: 503 Service Unavailable (helpdesk.gl-logistics.example)
+2026-08-10 11:07:48,202 INFO app.main request_id=84c79586 chat.request session=s-0916 text="Клиент требует компенсацию за разбитый товар в ГЛ-793828, куда направить?"
+2026-08-10 11:07:58,210 ERROR app.llm request_id=84c79586 ModelApiClient timeout after 10.0s (attempt 1/1) — httpx.ReadTimeout
+2026-08-10 11:17:30,638 INFO app.main request_id=32be0051 chat.request session=s-0d9e text="подскажите по ГЛ-609154, клиент нервничает, груз срочный Контакт для связи: +7 983 239-93-58"
+2026-08-10 11:17:34,900 INFO app.pipeline request_id=32be0051 answered doc=R-08 clause=8.1 confidence=0.82 latency_ms=4262
+2026-08-10 11:34:41,339 INFO app.main request_id=153172a2 chat.request session=s-2c01 text="Срок доставки Стандартом Москва — Воронеж?"
+2026-08-10 11:34:51,395 ERROR app.llm request_id=153172a2 ModelApiClient timeout after 10.0s (attempt 1/1) — httpx.ReadTimeout
+2026-08-10 11:44:17,389 INFO app.main request_id=df734cd7 chat.request session=s-9fcc text="груз ГЛ-849381 третий день на сортировке, это нормально? Перезвоните на +7 955 377-73-99"
+2026-08-10 11:44:18,513 ERROR app.helpdesk request_id=df734cd7 status request failed: 503 Service Unavailable (helpdesk.gl-logistics.example)
+2026-08-10 11:44:39,147 INFO app.main request_id=70ddc562 chat.request session=s-a870 text="Можно привезти груз на склад после 19:00?"
+2026-08-10 11:44:44,863 INFO app.pipeline request_id=70ddc562 answered doc=R-06 clause=6.3 confidence=0.72 latency_ms=5716
+2026-08-10 11:53:22,479 INFO app.main request_id=b1774df2 chat.request session=s-3dfa text="Добрый день, отправление ГЛ-223799 уже доставлено или нет?"
+2026-08-10 11:53:32,493 ERROR app.llm request_id=b1774df2 ModelApiClient timeout after 10.0s (attempt 1/1) — httpx.ReadTimeout
+2026-08-10 11:56:25,242 INFO app.main request_id=cb919835 chat.request session=s-0916 text="Клиент спрашивает, когда приедет ГЛ-617605, в ЛК пусто"
+2026-08-10 11:56:25,484 ERROR app.llm request_id=cb919835 HTTPStatusError 429 Too Many Requests from МодельАПИ
+2026-08-10 11:56:25,488 ERROR app.llm request_id=cb919835 fallback provider not configured (TOKENFLOW_KEY missing)
+2026-08-10 11:58:40,337 INFO app.main request_id=785b6738 chat.request session=s-0916 text="Клиент хочет сдать груз сегодня вечером, что взять с собой?"
+2026-08-10 11:58:50,377 ERROR app.llm request_id=785b6738 ModelApiClient timeout after 10.0s (attempt 1/1) — httpx.ReadTimeout
+2026-08-10 12:15:03,557 INFO app.main request_id=bd4685a4 chat.request session=s-682d text="Как оформить заявку на забор груза с адреса?"
+2026-08-10 12:15:13,582 ERROR app.llm request_id=bd4685a4 ModelApiClient timeout after 10.0s (attempt 1/1) — httpx.ReadTimeout
+2026-08-10 12:17:06,087 INFO app.main request_id=ab603ab4 chat.request session=s-0916 text="Клиент требует компенсацию за разбитый товар в ГЛ-244053, куда направить?"
+2026-08-10 12:17:09,870 INFO app.pipeline request_id=ab603ab4 answered doc=R-04 clause=4.1 confidence=0.64 latency_ms=3783
+2026-08-10 12:20:58,719 INFO app.main request_id=03112523 chat.request session=s-682d text="Сколько стоит возврат, если получатель не забрал?"
+2026-08-10 12:21:00,821 INFO app.pipeline request_id=03112523 answered doc=R-05 clause=5.5 confidence=0.65 latency_ms=2102
+2026-08-10 12:29:05,288 INFO app.main request_id=08396317 chat.request session=s-0916 text="Разница между Экспресс и Экспресс+ по цене для 10 кг?"
+2026-08-10 12:29:05,407 WARNING app.pipeline request_id=08396317 tariff_mismatch requested='Экспресс+' resolved='Экспресс'
+2026-08-10 12:29:06,312 INFO app.pipeline request_id=08396317 answered doc=R-03 clause=3.1 confidence=0.82 latency_ms=1024
+2026-08-10 13:48:28,427 INFO app.main request_id=5812f0fb chat.request session=s-5f2d text="Сколько дней на претензию по недостаче?"
+2026-08-10 13:48:29,626 WARNING app.pipeline request_id=5812f0fb answer_without_citation topic=дней претензию недостаче
+2026-08-10 13:48:29,630 INFO app.pipeline request_id=5812f0fb answered doc=- clause=- confidence=0.57 latency_ms=1203
+2026-08-10 15:05:43,637 INFO app.main request_id=1fd96565 chat.request session=s-a870 text="Хотим застраховать оборудование на 2 млн ₽, какие условия?"
+2026-08-10 15:05:43,855 WARNING app.retrieval request_id=1fd96565 empty_result query_topic=хотим застраховать оборудование млн
+2026-08-10 16:01:24,520 INFO app.main request_id=a99c5765 chat.request session=s-cfd2 text="Как оформить страховку на отправку за 80 000 ₽?"
+2026-08-10 16:01:26,187 INFO app.pipeline request_id=a99c5765 answered doc=R-07 clause=7.2 confidence=0.69 latency_ms=1667
+2026-08-10 16:08:35,684 INFO app.main request_id=6a05429d chat.request session=s-0d9e text="Сроки по Стандарту в рабочих днях или календарных?"
+2026-08-10 16:08:37,591 INFO app.pipeline request_id=6a05429d answered doc=R-02 clause=2.3 confidence=0.70 latency_ms=1907
+2026-08-10 16:59:11,755 INFO app.main request_id=26293df2 chat.request session=s-a870 text="Можно ли сдать груз без упаковки?"
+2026-08-10 16:59:13,525 INFO app.pipeline request_id=26293df2 answered doc=R-01 clause=1.2 confidence=0.69 latency_ms=1770
+2026-08-10 18:48:29,693 INFO app.main request_id=5393a151 chat.request session=s-0d9e text="ГЛ-357259 почему до сих пор не передан курьеру?"
+2026-08-10 18:48:31,719 INFO app.pipeline request_id=5393a151 answered doc=R-08 clause=8.4 confidence=0.88 latency_ms=2026
+2026-08-10 21:00:36,246 INFO app.main request_id=8632520d chat.request session=s-3dfa text="В какой срок можно вернуть груз отправителю?"
+2026-08-10 21:00:38,127 WARNING app.pipeline request_id=8632520d answer_without_citation topic=срок вернуть груз отправителю
+2026-08-10 21:00:38,139 INFO app.pipeline request_id=8632520d answered doc=- clause=- confidence=0.52 latency_ms=1893
+2026-08-10 21:48:59,589 INFO app.main request_id=1e631c31 chat.request session=s-3dfa text="Успеем до пятницы, если сдадим сегодня Экспрессом в Казань?"
+2026-08-10 21:49:01,516 INFO app.pipeline request_id=1e631c31 answered doc=R-02 clause=2.1 confidence=0.79 latency_ms=1927
+2026-08-10 22:08:25,856 INFO app.main request_id=d3d62577 chat.request session=s-9fcc text="клиент говорит трек ГЛ-786642 не обновляется с понедельника"
+2026-08-10 22:08:26,712 ERROR app.helpdesk request_id=d3d62577 status request failed: 503 Service Unavailable (helpdesk.gl-logistics.example)
+2026-08-10 22:10:54,368 INFO app.main request_id=d0b311d2 chat.request session=s-3dfa text="Можно оставить товар на складе на месяц на ответственное хранение?"
+2026-08-10 22:10:54,582 WARNING app.retrieval request_id=d0b311d2 empty_result query_topic=оставить товар складе месяц
+2026-08-10 23:59:58,201 INFO app.metrics request_id=- daily requests=33 answered=17 escalations=0 p95_latency_ms=10049

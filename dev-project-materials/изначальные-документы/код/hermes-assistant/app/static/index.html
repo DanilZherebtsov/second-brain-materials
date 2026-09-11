@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Гермес · подсказки оператору</title>
+<style>
+  :root {
+    --ink: #171633;
+    --violet: #6D5BF7;
+    --teal: #19C7B6;
+    --bg: #F5F4FB;
+    --line: #E3E1F2;
+    --muted: #6B6A86;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 15px/1.5 Inter, "Segoe UI", system-ui, -apple-system, sans-serif;
+  }
+  .widget {
+    max-width: 720px;
+    min-height: 560px;
+    margin: 32px auto;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(23, 22, 51, .08);
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: var(--ink);
+    color: #fff;
+  }
+  header h1 { margin: 0; font: 600 18px/1.2 "Space Grotesk", Inter, system-ui, sans-serif; }
+  header .brand {
+    color: var(--teal);
+    font: 600 12px/1 "Space Grotesk", Inter, system-ui, sans-serif;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+  #feed {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  .empty { margin: auto; color: var(--muted); text-align: center; }
+  .card { padding: 14px 16px; border: 1px solid var(--line); border-radius: 12px; }
+  .card .q { margin-bottom: 6px; color: var(--muted); font-size: 13px; }
+  .card .a { white-space: pre-wrap; }
+  .meta { display: flex; align-items: center; gap: 10px; margin-top: 10px; color: var(--muted); font-size: 13px; }
+  .bar { width: 90px; height: 6px; border-radius: 3px; background: var(--line); overflow: hidden; }
+  .bar span { display: block; height: 100%; background: var(--teal); }
+  .refs { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 0; padding: 0; list-style: none; }
+  .refs a {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: #EEEBFE;
+    color: var(--violet);
+    font-size: 13px;
+    text-decoration: none;
+  }
+  .refs a:hover { background: var(--violet); color: #fff; }
+  .card.error { border-color: #F2B8C0; background: #FFF6F7; }
+  .card.error pre { margin: 0; white-space: pre-wrap; word-break: break-all; font: 12px/1.4 ui-monospace, Menlo, monospace; }
+  .composer { display: flex; gap: 10px; padding: 14px 20px; border-top: 1px solid var(--line); background: #FBFAFE; }
+  .composer input {
+    flex: 1;
+    padding: 11px 14px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    color: var(--ink);
+    font: inherit;
+  }
+  .composer input:focus { outline: 2px solid var(--violet); outline-offset: -1px; }
+  .composer button {
+    padding: 11px 18px;
+    border: 0;
+    border-radius: 10px;
+    background: var(--violet);
+    color: #fff;
+    font: 600 15px/1 Inter, system-ui, sans-serif;
+    cursor: pointer;
+  }
+  .composer button:hover { background: #5A48E8; }
+</style>
+</head>
+<body>
+<div class="widget">
+  <header>
+    <h1>Гермес · подсказки оператору</h1>
+    <span class="brand">Evo-ai</span>
+  </header>
+  <div id="feed">
+    <div class="empty" id="empty">Вставьте вопрос клиента или номер груза ГЛ-XXXXXX — ассистент предложит ответ со ссылкой на регламент.</div>
+  </div>
+  <div class="composer">
+    <input id="message" type="text" autocomplete="off" placeholder="Например: сколько дней на претензию?" autofocus>
+    <button id="send" type="button">Отправить</button>
+  </div>
+</div>
+<script>
+  const feed = document.getElementById('feed');
+  const input = document.getElementById('message');
+  const sessionId = 's-' + Math.random().toString(16).slice(2, 6);
+
+  function el(tag, cls, text) {
+    const node = document.createElement(tag);
+    if (cls) node.className = cls;
+    if (text !== undefined) node.textContent = text;
+    return node;
+  }
+
+  function addCard(card) {
+    const empty = document.getElementById('empty');
+    if (empty) empty.remove();
+    feed.appendChild(card);
+    feed.scrollTop = feed.scrollHeight;
+  }
+
+  function renderAnswer(question, data) {
+    const card = el('div', 'card');
+    card.appendChild(el('div', 'q', 'Вопрос: ' + question));
+    card.appendChild(el('div', 'a', data.answer));
+
+    const meta = el('div', 'meta');
+    const bar = el('div', 'bar');
+    const fill = el('span');
+    fill.style.width = Math.round(data.confidence * 100) + '%';
+    bar.appendChild(fill);
+    meta.appendChild(bar);
+    meta.appendChild(el('span', '', 'уверенность ' + data.confidence.toFixed(2) + ' · ' + data.latency_ms + ' мс'));
+    card.appendChild(meta);
+
+    if (data.citations.length) {
+      const refs = el('ul', 'refs');
+      for (const { doc_id, title, clause } of data.citations) {
+        const li = el('li');
+        const link = el('a', '', doc_id + (clause ? ', п. ' + clause : '') + ' · ' + title);
+        link.href = `/regulations/${doc_id}`;
+        link.target = '_blank';
+        li.appendChild(link);
+        refs.appendChild(li);
+      }
+      card.appendChild(refs);
+    }
+    addCard(card);
+  }
+
+  function renderError(data) {
+    const card = el('div', 'card error');
+    card.appendChild(el('pre', '', JSON.stringify(data)));
+    addCard(card);
+  }
+
+  async function send() {
+    const message = input.value;
+    input.value = '';
+    try {
+      const resp = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message, session_id: sessionId, channel: 'chat' }),
+      });
+      const data = await resp.json();
+      if (!resp.ok) {
+        renderError(data);
+        return;
+      }
+      renderAnswer(message, data);
+    } catch (e) {
+      renderError({ error: String(e) });
+    }
+  }
+
+  document.getElementById('send').addEventListener('click', send);
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') send();
+  });
+</script>
+</body>
+</html>

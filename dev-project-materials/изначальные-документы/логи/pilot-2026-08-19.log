@@ -1,0 +1,56 @@
+2026-08-19 07:58:36,359 INFO app.main request_id=- startup version=0.4.2 chunking=fixed llm_provider=modelapi llm_timeout_s=10.0 llm_retries=0
+2026-08-19 07:58:37,219 ERROR app.kb_loader request_id=- UnicodeDecodeError: 'utf-8' codec can't decode byte 0xcf in position 0 — kb/regulations/R-06_График_работы_складов.md
+2026-08-19 07:58:37,238 INFO app.kb_loader request_id=- kb load: 7/8 regulations loaded (chunking=fixed)
+2026-08-19 08:23:33,521 INFO app.main request_id=b7df6d14 chat.request session=s-27ec text="Клиент требует компенсацию за разбитый товар в ГЛ-187786, куда направить?"
+2026-08-19 08:23:35,791 INFO app.pipeline request_id=b7df6d14 answered doc=R-04 clause=4.1 confidence=0.91 latency_ms=2270
+2026-08-19 10:06:55,596 INFO app.main request_id=96e6fab9 chat.request session=s-40e1 text="Статус ГЛ-985530 подскажите пожалуйста Контакт для связи: +7 908 954-38-97"
+2026-08-19 10:06:56,356 ERROR app.helpdesk request_id=96e6fab9 status request failed: 503 Service Unavailable (helpdesk.gl-logistics.example)
+2026-08-19 10:07:33,401 INFO app.main request_id=b05f3390 chat.request session=s-0893 text="Успеем до пятницы, если сдадим сегодня Экспрессом в Казань?"
+2026-08-19 10:07:33,613 ERROR app.llm request_id=b05f3390 HTTPStatusError 429 Too Many Requests from МодельАПИ
+2026-08-19 10:07:33,617 ERROR app.llm request_id=b05f3390 fallback provider not configured (TOKENFLOW_KEY missing)
+2026-08-19 10:38:14,351 INFO app.main request_id=02de5bf9 chat.request session=s-7aa6 text="Сколько дней на претензию по недостаче?"
+2026-08-19 10:38:23,627 WARNING app.pipeline request_id=02de5bf9 answer_without_citation topic=дней претензию недостаче
+2026-08-19 10:38:23,632 INFO app.pipeline request_id=02de5bf9 answered doc=- clause=- confidence=0.46 latency_ms=9281
+2026-08-19 10:46:42,722 INFO app.main request_id=8f2b9e04 chat.request session=s-9053 text="Клиент везёт станок за 1,2 млн, страхуете?"
+2026-08-19 10:46:42,844 WARNING app.retrieval request_id=8f2b9e04 empty_result query_topic=клиент везет станок млн
+2026-08-19 11:05:36,027 INFO app.main request_id=172b03e2 chat.request session=s-2b11 text="Возьмёте станок длиной 3,5 м?"
+2026-08-19 11:05:36,195 WARNING app.retrieval request_id=172b03e2 empty_result query_topic=возьмете станок длиной
+2026-08-19 11:12:45,390 INFO app.main request_id=f430754f chat.request session=s-2b11 text="Получатель отказался от груза ГЛ-184727, что дальше?"
+2026-08-19 11:12:53,033 INFO app.pipeline request_id=f430754f answered doc=R-05 clause=5.3 confidence=0.82 latency_ms=7643
+2026-08-19 11:25:29,909 INFO app.main request_id=8a56e6b8 chat.request session=s-7aa6 text="клиент говорит трек ГЛ-950276 не обновляется с понедельника"
+2026-08-19 11:25:39,913 ERROR app.llm request_id=8a56e6b8 ModelApiClient timeout after 10.0s (attempt 1/1) — httpx.ReadTimeout
+2026-08-19 11:30:08,298 INFO app.main request_id=e7f10ba6 chat.request session=s-5f55 text="посчитайте Экспресс+ 12 кг, Москва"
+2026-08-19 11:30:08,435 WARNING app.pipeline request_id=e7f10ba6 tariff_mismatch requested='Экспресс+' resolved='Экспресс'
+2026-08-19 11:30:13,580 INFO app.pipeline request_id=e7f10ba6 answered doc=R-03 clause=3.4 confidence=0.76 latency_ms=5282
+2026-08-19 11:31:02,472 INFO app.main request_id=865b8047 chat.request session=s-9053 text="Экспресс по Москве 20 кг — сколько выйдет?"
+2026-08-19 11:31:12,498 ERROR app.llm request_id=865b8047 ModelApiClient timeout after 10.0s (attempt 1/1) — httpx.ReadTimeout
+2026-08-19 12:41:03,099 INFO app.main request_id=- startup version=0.4.2 chunking=fixed llm_provider=modelapi llm_timeout_s=10.0 llm_retries=0
+2026-08-19 12:41:03,519 ERROR app.kb_loader request_id=- UnicodeDecodeError: 'utf-8' codec can't decode byte 0xcf in position 0 — kb/regulations/R-06_График_работы_складов.md
+2026-08-19 12:41:03,538 INFO app.kb_loader request_id=- kb load: 7/8 regulations loaded (chunking=fixed)
+2026-08-19 12:41:17,736 INFO app.main request_id=948cbf5d chat.request session=s-27ec text="Возьмёте станок длиной 3,5 м?"
+2026-08-19 12:41:17,954 WARNING app.retrieval request_id=948cbf5d empty_result query_topic=возьмете станок длиной
+2026-08-19 13:17:52,106 INFO app.main request_id=232f16ce chat.request session=s-9053 text="Сколько стоит отправить 15 кг Стандартом по Москве?"
+2026-08-19 13:18:02,144 ERROR app.llm request_id=232f16ce ModelApiClient timeout after 10.0s (attempt 1/1) — httpx.ReadTimeout
+2026-08-19 14:05:11,646 INFO app.main request_id=- startup version=0.4.2 chunking=fixed llm_provider=modelapi llm_timeout_s=10.0 llm_retries=0
+2026-08-19 14:05:12,066 INFO app.kb_loader request_id=- kb load: 8/8 regulations loaded (chunking=fixed)
+2026-08-19 14:06:38,674 WARNING app.main request_id=58b94b0b RequestValidationError body.message: String should have at least 1 character
+2026-08-19 14:24:51,620 INFO app.main request_id=5a93f117 chat.request session=s-2b11 text="Статус ГЛ-912758 подскажите пожалуйста"
+2026-08-19 14:24:52,160 ERROR app.helpdesk request_id=5a93f117 status request failed: 503 Service Unavailable (helpdesk.gl-logistics.example)
+2026-08-19 14:58:57,351 INFO app.main request_id=248c69c4 chat.request session=s-1a92 text="Сколько стоит ответственное хранение паллеты?"
+2026-08-19 14:58:57,624 WARNING app.retrieval request_id=248c69c4 empty_result query_topic=стоит ответственное хранение паллеты
+2026-08-19 15:18:18,825 INFO app.main request_id=fec19c11 chat.request session=s-9053 text="Добрый день, отправление ГЛ-642973 уже доставлено или нет?"
+2026-08-19 15:18:20,610 INFO app.pipeline request_id=fec19c11 answered doc=R-08 clause=8.5 confidence=0.87 latency_ms=1785
+2026-08-19 15:44:12,085 WARNING app.main request_id=1fa0654e RequestValidationError body.message: String should have at least 1 character
+2026-08-19 15:49:18,085 INFO app.main request_id=6ca1e14e chat.request session=s-ec31 text="Клиент спрашивает, когда приедет ГЛ-874713, в ЛК пусто"
+2026-08-19 15:49:18,811 ERROR app.helpdesk request_id=6ca1e14e status request failed: 503 Service Unavailable (helpdesk.gl-logistics.example)
+2026-08-19 17:10:05,550 INFO app.main request_id=3d2b38b6 chat.request session=s-1a92 text="Сколько дней на претензию по недостаче?"
+2026-08-19 17:10:06,733 WARNING app.pipeline request_id=3d2b38b6 answer_without_citation topic=дней претензию недостаче
+2026-08-19 17:10:06,746 INFO app.pipeline request_id=3d2b38b6 answered doc=- clause=- confidence=0.45 latency_ms=1196
+2026-08-19 18:25:30,469 INFO app.main request_id=9c45c887 chat.request session=s-7aa6 text="Нужна ли доверенность, если груз сдаёт курьер компании?"
+2026-08-19 18:25:32,470 WARNING app.pipeline request_id=9c45c887 answer_without_citation topic=нужна доверенность груз сдает
+2026-08-19 18:25:32,484 INFO app.pipeline request_id=9c45c887 answered doc=- clause=- confidence=0.55 latency_ms=2015
+2026-08-19 19:56:49,219 INFO app.main request_id=7d21e738 chat.request session=s-4375 text="ГЛ-488881 почему до сих пор не передан курьеру?"
+2026-08-19 19:56:52,451 INFO app.pipeline request_id=7d21e738 answered doc=R-08 clause=8.2 confidence=0.86 latency_ms=3232
+2026-08-19 23:03:44,680 INFO app.main request_id=2b875fdc chat.request session=s-b2f7 text="Сколько стоит перевозка негабарита 400 кг?"
+2026-08-19 23:03:45,053 WARNING app.retrieval request_id=2b875fdc empty_result query_topic=стоит перевозка негабарита 400
+2026-08-19 23:59:58,768 INFO app.metrics request_id=- daily requests=8 answered=4 escalations=0 p95_latency_ms=10026

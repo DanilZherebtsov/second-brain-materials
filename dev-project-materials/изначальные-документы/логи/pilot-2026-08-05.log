@@ -1,0 +1,48 @@
+2026-08-05 07:58:04,189 INFO app.main request_id=- startup version=0.4.2 chunking=fixed llm_provider=modelapi llm_timeout_s=10.0 llm_retries=0
+2026-08-05 07:58:04,758 INFO app.kb_loader request_id=- kb load: 8/8 regulations loaded (chunking=fixed)
+2026-08-05 08:40:14,791 INFO app.main request_id=86e123ec chat.request session=s-d782 text="подскажите по ГЛ-298216, клиент нервничает, груз срочный"
+2026-08-05 08:40:15,777 ERROR app.helpdesk request_id=86e123ec status request failed: 503 Service Unavailable (helpdesk.gl-logistics.example)
+2026-08-05 09:32:37,834 INFO app.main request_id=092cb6a0 chat.request session=s-6728 text="Разница между Экспресс и Экспресс+ по цене для 10 кг?"
+2026-08-05 09:32:37,942 WARNING app.pipeline request_id=092cb6a0 tariff_mismatch requested='Экспресс+' resolved='Экспресс'
+2026-08-05 09:32:40,169 INFO app.pipeline request_id=092cb6a0 answered doc=R-03 clause=3.5 confidence=0.84 latency_ms=2335
+2026-08-05 09:49:24,583 INFO app.main request_id=1f927228 chat.request session=s-9704 text="Входит ли упаковка в стоимость Стандарта?"
+2026-08-05 09:49:26,803 WARNING app.pipeline request_id=1f927228 answer_without_citation topic=входит упаковка стоимость стандарта
+2026-08-05 09:49:26,809 INFO app.pipeline request_id=1f927228 answered doc=- clause=- confidence=0.49 latency_ms=2226
+2026-08-05 10:29:26,992 INFO app.main request_id=65d910eb chat.request session=s-2270 text="Клиент хочет отправить газовые баллоны, можно?"
+2026-08-05 10:29:27,087 INFO app.pipeline request_id=65d910eb answered doc=R-01 clause=1.1 confidence=0.47 latency_ms=2475
+2026-08-05 10:48:50,047 INFO app.main request_id=3a4a2e5b chat.request session=s-9704 text="В какой срок рассматривают претензию по повреждению?"
+2026-08-05 10:49:00,083 ERROR app.llm request_id=3a4a2e5b ModelApiClient timeout after 10.0s (attempt 1/1) — httpx.ReadTimeout
+2026-08-05 10:51:01,138 INFO app.main request_id=68f756b4 chat.request session=s-6ae0 text="Сколько стоит ответственное хранение паллеты?"
+2026-08-05 10:51:01,382 WARNING app.retrieval request_id=68f756b4 empty_result query_topic=стоит ответственное хранение паллеты
+2026-08-05 10:57:26,546 INFO app.main request_id=f568a447 chat.request session=s-fac0 text="Где мой груз ГЛ-890056? Обещали вчера"
+2026-08-05 10:57:27,156 ERROR app.llm request_id=f568a447 HTTPStatusError 429 Too Many Requests from МодельАПИ
+2026-08-05 10:57:27,159 ERROR app.llm request_id=f568a447 fallback provider not configured (TOKENFLOW_KEY missing)
+2026-08-05 11:00:16,846 INFO app.main request_id=656fdf09 chat.request session=s-c2a0 text="Добрый день, отправление ГЛ-600895 уже доставлено или нет? Перезвоните на +7 921 710-95-59"
+2026-08-05 11:00:20,320 INFO app.pipeline request_id=656fdf09 answered doc=R-08 clause=8.5 confidence=0.62 latency_ms=3474
+2026-08-05 11:10:50,904 INFO app.main request_id=665dc513 chat.request session=s-c2a0 text="Какие документы нужны для отправки от юрлица?"
+2026-08-05 11:10:51,365 ERROR app.llm request_id=665dc513 HTTPStatusError 429 Too Many Requests from МодельАПИ
+2026-08-05 11:10:51,367 ERROR app.llm request_id=665dc513 fallback provider not configured (TOKENFLOW_KEY missing)
+2026-08-05 11:42:21,106 INFO app.main request_id=e3fd9b94 chat.request session=s-2270 text="Принимаете лакокрасочные материалы?"
+2026-08-05 11:42:21,405 WARNING app.retrieval request_id=e3fd9b94 empty_result query_topic=принимаете лакокрасочные материалы
+2026-08-05 11:46:21,647 INFO app.main request_id=b85bd150 chat.request session=s-6728 text="ГЛ-848281 почему до сих пор не передан курьеру?"
+2026-08-05 11:46:31,671 ERROR app.llm request_id=b85bd150 ModelApiClient timeout after 10.0s (attempt 1/1) — httpx.ReadTimeout
+2026-08-05 12:53:29,120 INFO app.main request_id=ed0f8c07 chat.request session=s-6728 text="ГЛ-494873 почему до сих пор не передан курьеру?"
+2026-08-05 12:53:30,813 INFO app.pipeline request_id=ed0f8c07 answered doc=R-08 clause=8.3 confidence=0.65 latency_ms=1693
+2026-08-05 13:01:51,420 INFO app.main request_id=e6fa3f83 chat.request session=s-fac0 text="Можно оставить товар на складе на месяц на ответственное хранение?"
+2026-08-05 13:01:51,667 WARNING app.retrieval request_id=e6fa3f83 empty_result query_topic=оставить товар складе месяц
+2026-08-05 15:10:28,932 INFO app.main request_id=1f762202 chat.request session=s-6ae0 text="посчитайте Экспресс+ 12 кг, Москва"
+2026-08-05 15:10:29,054 WARNING app.pipeline request_id=1f762202 tariff_mismatch requested='Экспресс+' resolved='Экспресс'
+2026-08-05 15:10:29,902 INFO app.pipeline request_id=1f762202 answered doc=R-03 clause=3.5 confidence=0.80 latency_ms=970
+2026-08-05 16:56:09,537 INFO app.main request_id=e46b772e chat.request session=s-d782 text="Какие документы нужны для отправки от юрлица?"
+2026-08-05 16:56:19,580 ERROR app.llm request_id=e46b772e ModelApiClient timeout after 10.0s (attempt 1/1) — httpx.ReadTimeout
+2026-08-05 18:05:24,588 INFO app.main request_id=0512be04 chat.request session=s-6728 text="Сколько стоит ответственное хранение паллеты?"
+2026-08-05 18:05:24,682 WARNING app.retrieval request_id=0512be04 empty_result query_topic=стоит ответственное хранение паллеты
+2026-08-05 18:14:52,656 INFO app.main request_id=e7d7335a chat.request session=s-9704 text="ГЛ-349646 почему до сих пор не передан курьеру?"
+2026-08-05 18:14:55,848 INFO app.pipeline request_id=e7d7335a answered doc=R-08 clause=8.5 confidence=0.74 latency_ms=3192
+2026-08-05 18:15:12,361 INFO app.main request_id=af3645e6 chat.request session=s-c2a0 text="клиент хочет Экспресс+ на завтра утром, 7 кг, МО — сколько?"
+2026-08-05 18:15:12,408 WARNING app.pipeline request_id=af3645e6 tariff_mismatch requested='Экспресс+' resolved='Экспресс'
+2026-08-05 18:15:13,420 INFO app.pipeline request_id=af3645e6 answered doc=R-03 clause=3.3 confidence=0.80 latency_ms=1059
+2026-08-05 20:33:45,796 INFO app.main request_id=77bcabd7 chat.request session=s-2270 text="Где ГЛ-528170? И сколько стоит Стандартом отправить туда же ещё 10 кг?"
+2026-08-05 20:33:46,943 INFO app.pipeline request_id=77bcabd7 answered doc=R-03 clause=3.2 confidence=0.76 latency_ms=1147
+2026-08-05 20:42:40,019 WARNING app.main request_id=1a6aa40c RequestValidationError body.message: String should have at least 1 character
+2026-08-05 23:59:58,169 INFO app.metrics request_id=- daily requests=19 answered=9 escalations=0 p95_latency_ms=10043
